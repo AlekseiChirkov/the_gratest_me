@@ -9,7 +9,7 @@ python = "^3.10"
 Django = "^4.1.4"
 djangorestframework = "^3.14.0"
 django-rest-swagger = "^2.2.0"
-drf-spectacular = "^0.25.0"
+drf-spectacular = {extras = ["sidecar"], version = "^0.25.0"}
 
 [tool.poetry.dev-dependencies]
 

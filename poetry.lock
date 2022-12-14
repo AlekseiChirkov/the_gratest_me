@@ -121,6 +121,7 @@ python-versions = ">=3.6"
 [package.dependencies]
 Django = ">=2.2"
 djangorestframework = ">=3.10.3"
+drf-spectacular-sidecar = {version = "*", optional = true, markers = "extra == \"sidecar\""}
 inflection = ">=0.3.1"
 jsonschema = ">=2.6.0"
 PyYAML = ">=5.1"
@@ -129,6 +130,17 @@ uritemplate = ">=2.0.0"
 [package.extras]
 offline = ["drf-spectacular-sidecar"]
 sidecar = ["drf-spectacular-sidecar"]
+
+[[package]]
+name = "drf-spectacular-sidecar"
+version = "2022.12.1"
+description = "Serve self-contained distribution builds of Swagger UI and Redoc with Django"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Django = ">=2.2"
 
 [[package]]
 name = "idna"
@@ -293,7 +305,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d848351b32897f8ef324ed11f8b71a02083389c51000c35de0f4d5a3fc75a391"
+content-hash = "bc79e4ca5840ab1393082fc2ceceae0516c6d8c5f271805554546ec0065a4245"
 
 [metadata.files]
 asgiref = []
@@ -306,6 +318,7 @@ django = []
 django-rest-swagger = []
 djangorestframework = []
 drf-spectacular = []
+drf-spectacular-sidecar = []
 idna = []
 inflection = [
     {file = "inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2"},

@@ -7,16 +7,20 @@ class Scale(models.Model):
     user = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE
     )
-    name = models.CharField(
+    title = models.CharField(
         max_length=100
     )
     points = models.IntegerField(
         default=0, validators=(
             MinValueValidator(1),
-            MaxValueValidator(10)
+            MaxValueValidator(100)
         )
     )
 
     class Meta:
         verbose_name = 'Progress scale'
         verbose_name_plural = 'Progress scales'
+        unique_together = ('user', 'title')
+
+    def __str__(self):
+        return self.title
