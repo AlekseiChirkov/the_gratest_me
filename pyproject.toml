@@ -7,6 +7,7 @@ authors = ["Scareface <tektonikboy98@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.1.4"
+djangorestframework = "^3.14.0"
 
 [tool.poetry.dev-dependencies]
 
